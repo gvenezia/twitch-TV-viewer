@@ -21,12 +21,11 @@
     // ================ Functions ==================
     function apiCall(streamId){
         let xhttp = new XMLHttpRequest();
-        let url   = `https://wind-bow.glitch.me/twitch-api/streams/${streamId}`;
+        let url   = `https://wind-bow.glitch.me/twitch-api/channels/${streamId}`;
         
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState == 4 && xhttp.status == 200) {
-                displayCurrentStream(streamId, JSON.parse(this.responseText));
-                
+                displayCurrentStream(streamId, JSON.parse(this.response));
             } 
         };
         
@@ -35,40 +34,29 @@
     };
     
     function displayCurrentStream(streamId, apiResponse) {
-        // console.log('displayStreams() called');
         
         console.log(apiResponse);
-        
-        let streamLink = `https://www.twitch.tv/${streamId}`;
         
         let newDiv = document.createElement('div');
         
         newDiv.classList.add('row');
         newDiv.classList.add('stream-div');
         
-        if (apiResponse.stream != null){
-            newDiv.innerHTML = `<div class="col-2">
-                                    <a href="${streamLink}">
-                                        ${apiResponse.stream.channel.display_name}
-                                    </a>
-                                </div>
-                                <div class="col-6">
-                                    ${apiResponse.stream.channel.status}
-                                </div>
-                                `;
-        } else {
-            newDiv.innerHTML = `<div class="col-2">
-                                    <a href="${streamLink}">
-                                        ${streamId}
-                                    </a>
-                                </div>
-                                <div class="col-6 m-auto">
-                                    <em>Offline</em>
-                                </div>
-                                `;
-        }
-        
+        newDiv.innerHTML = `<div class="col-2 col-element">
+                                <img src="${apiResponse.logo}"/>
+                            </div>
+                            <div class="col-4 col-element">
+                                <a href="${apiResponse.url}">
+                                    ${apiResponse.display_name}
+                                </a>
+                            </div>
+                            <div class="col-6 align-middle col-element">
+                                ${apiResponse.status}
+                            </div>
+                            `;
+    
         channelsContainer.appendChild(newDiv);
+        
     }; // End displayCurrentStream()
     
 })();
