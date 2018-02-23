@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+    width: auto;
+}
+
+body {
+    /*Background vector created by Starline - Freepik.com */
+    /* BACKGROUND ISN'T WORKING */
+    /*background-image: url("https://www.freepik.com/free-vector/circular-halftone-dots-vector-background_1725109.htm");*/
+}
+
+/* Classes */
+.container-spacer {
+    width: 700px;
+    height: 20px;
+    background-color: gray;
+    position: relative;
+    z-index: 1;
+}
+
+.row {
+    margin: 0px 0px;
+}
+
+.stream-div {
+    background-color: lightgray;
+    border-bottom: 2px solid gray;
+    padding: 20px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+    color: #ba7900;
+}
+
+/* ID's */
+#channels-container {
+    max-width: 730px;
+    box-shadow: 0px 5px 10px black;
+    margin: auto auto;
+    position: relative;
+    z-index: 2;
+}
+
+#header-row {
+    width: 850px;
+    font-family: 'Titillium Web';
+    font-weight: 900;
+    text-shadow: -3px 3px 0px #719b90;
+    padding: 20px;
+    color: #fcf4e5;
+    background-color: #507a6f;
+    box-shadow: 0px 5px 10px black;
+    position: relative;
+    z-index: 2;
+}
