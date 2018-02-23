@@ -5,7 +5,8 @@
     // ================= Variables ==================
     // JS variables
     let apiResponse = {},
-        streamArr   = ['freecodecamp', 'ESL_SC2'];
+        streamArr   = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp",
+                       "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
     
     // HTML elements
     const channelsContainer = document.getElementById('channels-container');
@@ -34,24 +35,21 @@
     };
     
     function displayCurrentStream(streamId, apiResponse) {
-        
-        console.log(apiResponse);
-        
         let newDiv = document.createElement('div');
         
         newDiv.classList.add('row');
         newDiv.classList.add('stream-div');
         
-        newDiv.innerHTML = `<div class="col-2 col-element">
+        newDiv.innerHTML = `<div class="col-2 col-image">
                                 <img src="${apiResponse.logo}"/>
                             </div>
-                            <div class="col-4 col-element">
+                            <div class="col-3 col-element">
                                 <a href="${apiResponse.url}">
                                     ${apiResponse.display_name}
                                 </a>
                             </div>
-                            <div class="col-6 align-middle col-element">
-                                ${apiResponse.status}
+                            <div class="col-6 col-element">
+                                <em>${apiResponse.status ? apiResponse.status : 'Offline'}</em>
                             </div>
                             `;
     

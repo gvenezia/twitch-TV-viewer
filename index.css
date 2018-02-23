@@ -1,6 +1,8 @@
 html, body {
     height: 100%;
     width: auto;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
 }
 
 body {
@@ -10,13 +12,17 @@ body {
 }
 
 div img {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     margin: 0px 0px;
 }
 
 /* Classes */
 .col-element {
+    margin: auto auto;
+}
+
+.col-image {
     padding: 0px 0px;
 }
 
@@ -28,14 +34,20 @@ div img {
     z-index: 1;
 }
 
+.display-2 {
+    font-weight: 700;
+    font-size: 5em;
+    text-align: center;
+}
+
 .row {
     margin: 0px 0px;
 }
 
 .stream-div {
+    font-size: 1.35em;
     background-color: lightgray;
     border-bottom: 2px solid gray;
-    /*padding: 20px 20px;*/
     position: relative;
     z-index: 2;
 }
@@ -45,6 +57,7 @@ a:active,
 a:hover,
 a:visited {
     color: #ba7900;
+    text-decoration: none;
 }
 
 /* ID's */
@@ -60,12 +73,35 @@ a:visited {
 #header-row {
     width: 850px;
     font-family: 'Titillium Web';
-    font-weight: 900;
     text-shadow: -3px 3px 0px #719b90;
+    margin: auto auto;
     padding: 20px;
     color: #fcf4e5;
     background-color: #507a6f;
     box-shadow: 0px 5px 10px black;
     position: relative;
     z-index: 2;
+}
+
+ /* This looks good for now, but you haven't thoroughly checked all of it */
+ /* Bootstrap media queries*/
+@media (max-width: 991px) {
+    body {
+        font-size: 12px;
+    }
+    
+    .container-spacer {
+        width: 70%;
+    }
+    
+    #header-row {
+        width: 90%;
+    }
+}
+
+@media (max-width: 760px) {
+    div img {
+        width: 75px;
+        height: 75px;
+    }
 }
