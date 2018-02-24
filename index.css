@@ -46,7 +46,6 @@ div img {
 
 .stream-div {
     font-size: 1.35em;
-    background-color: lightgray;
     border-bottom: 2px solid gray;
     position: relative;
     z-index: 2;
@@ -56,12 +55,24 @@ a,
 a:active,
 a:hover,
 a:visited {
-    color: #ba7900;
     text-decoration: none;
+    border: none;
+}
+
+a, 
+a:active,
+a:visited {
+    color: #776747;
+}
+
+a:hover {
+    color: #9b865b;
 }
 
 /* ID's */
 #channels-container {
+    background-color: lightgray;
+    border: none;
     max-width: 730px;
     box-shadow: 0px 5px 10px black;
     margin: auto auto;
@@ -90,6 +101,11 @@ a:visited {
         font-size: 12px;
     }
     
+    div img {
+        width: 75px;
+        height: 75px;
+    }
+    
     .container-spacer {
         width: 70%;
     }
@@ -97,11 +113,10 @@ a:visited {
     #header-row {
         width: 90%;
     }
+    
+    
 }
 
 @media (max-width: 760px) {
-    div img {
-        width: 75px;
-        height: 75px;
-    }
+    
 }

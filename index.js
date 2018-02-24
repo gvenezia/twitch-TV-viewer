@@ -37,21 +37,30 @@
     function displayCurrentStream(streamId, apiResponse) {
         let newDiv = document.createElement('div');
         
-        newDiv.classList.add('row');
-        newDiv.classList.add('stream-div');
-        
-        newDiv.innerHTML = `<div class="col-2 col-image">
-                                <img src="${apiResponse.logo}"/>
-                            </div>
-                            <div class="col-3 col-element">
-                                <a href="${apiResponse.url}">
-                                    ${apiResponse.display_name}
-                                </a>
-                            </div>
-                            <div class="col-6 col-element">
-                                <em>${apiResponse.status ? apiResponse.status : 'Offline'}</em>
-                            </div>
+        newDiv.innerHTML = `<a href="${apiResponse.url}" target="_blank">
+                                <div class="row stream-div">
+                                    <div class="col-2 col-image">
+                                        <img src="${apiResponse.logo}"/>
+                                    </div>
+                                    <div class="col-3 col-element">
+                                        
+                                        ${apiResponse.display_name}
+                                        
+                                    </div>
+                                    <div class="col-6 col-element">
+                                        <em>${apiResponse.status ? apiResponse.status : 'Offline'}</em>
+                                    
+                                    </div>
+                                </div>
+                            </a>
                             `;
+                            
+        // Change background color to reflect the status, greenish online, blue-ish offline
+        if (apiResponse.status != null){
+            newDiv.style.backgroundColor = '#b7ccba';
+        } else {
+            newDiv.style.backgroundColor = '#b7c9cc';
+        }
     
         channelsContainer.appendChild(newDiv);
         
