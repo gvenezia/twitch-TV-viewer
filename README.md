@@ -1,7 +1,7 @@
 # Twitch TV Channel Viewer
 
 ## What does it do?
-Shows users to a list of some of the most popular twitch.tv channels. The page displays the channel logo, title, and current streaming status. Users can click on one of the channel containers to be redirected to that channel's twitch.tv page in a separate tab.
+The page renders a list of some of the most popular twitch.tv channels. It displays the channel logo, title, and current streaming status. Users can click on one of the channel containers to be redirected to that channel's twitch.tv page in a separate tab.
 
 [Try it out on Codepen!](https://codepen.io/gvenezia/full/BYOdgG/)
 
