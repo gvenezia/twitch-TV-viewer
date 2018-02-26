@@ -12,7 +12,8 @@ The twitch.tv API provides the information for the channels. This information is
 HTML, CSS, vanilla JS, Bootstrap 4.0
 
 Bootstrap elements are responsive, plus I've added a few @media queries.
----
+
+___
 *Created for freeCodeCamp*
----
+___
 ![screenshot of the twitch.tv channel viewer](https://github.com/gvenezia/myWebsite/blob/master/images/twitch.png)
