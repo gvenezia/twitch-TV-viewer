@@ -5,19 +5,30 @@ html, body {
     font-size: 16px;
 }
 
-body {
-    /*Background vector created by Starline - Freepik.com */
-    /* BACKGROUND ISN'T WORKING */
-    /*background-image: url("https://www.freepik.com/free-vector/circular-halftone-dots-vector-background_1725109.htm");*/
+a,
+a:active,
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+
+a, 
+a:active,
+a:visited {
+    color: #776747;
+}
+
+a:hover {
+    color: #8e743e;
+    
 }
 
 div img {
     width: 100px;
     height: 100px;
-    margin: 0px 0px;
 }
 
-/* Classes */
+/* Classes, sorted alphabetically */
 .col-element {
     margin: auto auto;
 }
@@ -27,7 +38,8 @@ div img {
 }
 
 .container-spacer {
-    width: 700px;
+    width: 70%;
+    max-width: 700px;
     height: 20px;
     background-color: gray;
     position: relative;
@@ -46,32 +58,18 @@ div img {
 
 .stream-div {
     font-size: 1.35em;
+    box-sizing: content-box;
     border-bottom: 2px solid gray;
     position: relative;
     z-index: 2;
 }
 
-a,
-a:active,
-a:hover,
-a:visited {
-    text-decoration: none;
-    border: none;
+.stream-div:hover {
+    box-shadow: 0px 0px 25px gray;
 }
 
-a, 
-a:active,
-a:visited {
-    color: #776747;
-}
-
-a:hover {
-    color: #9b865b;
-}
-
-/* ID's */
+/* ID's, sorted alphabetically */
 #channels-container {
-    background-color: lightgray;
     border: none;
     max-width: 730px;
     box-shadow: 0px 5px 10px black;
@@ -82,7 +80,8 @@ a:hover {
 }
 
 #header-row {
-    width: 850px;
+    width: 90%;
+    max-width: 850px;
     font-family: 'Titillium Web';
     text-shadow: -3px 3px 0px #719b90;
     margin: auto auto;
@@ -94,29 +93,32 @@ a:hover {
     z-index: 2;
 }
 
- /* This looks good for now, but you haven't thoroughly checked all of it */
- /* Bootstrap media queries*/
+#last-spacer {
+    margin-bottom: 20px;
+}
+
+/* Bootstrap media queries*/
+
+/* Large Devices – Desktop view */
 @media (max-width: 991px) {
     body {
-        font-size: 12px;
+        font-size: 14px;
     }
     
     div img {
         width: 75px;
         height: 75px;
     }
-    
-    .container-spacer {
-        width: 70%;
-    }
-    
-    #header-row {
-        width: 90%;
-    }
-    
-    
 }
 
-@media (max-width: 760px) {
+/* Small Devices – Mobile View */
+@media (max-width: 575px) {
+    body {
+        font-size: 12px;
+    }
     
+    div img {
+        width: 60px;
+        height: 60px;
+    }
 }

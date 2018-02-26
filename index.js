@@ -34,6 +34,7 @@
         xhttp.send();
     };
     
+    // NOTE: could easily add sorting buttons by calling similar functions w/ modified results
     function displayCurrentStream(streamId, apiResponse) {
         let newDiv = document.createElement('div');
         
@@ -43,13 +44,10 @@
                                         <img src="${apiResponse.logo}"/>
                                     </div>
                                     <div class="col-3 col-element">
-                                        
                                         ${apiResponse.display_name}
-                                        
                                     </div>
                                     <div class="col-6 col-element">
                                         <em>${apiResponse.status ? apiResponse.status : 'Offline'}</em>
-                                    
                                     </div>
                                 </div>
                             </a>
